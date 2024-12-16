@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - [Your Name]</title>
+    <title>[Your Name] - Portfolio</title>
     <style>
         :root {
             --primary-color: #4CAF50;
@@ -16,15 +16,17 @@
             font-family: 'Arial', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
+            overflow-x: hidden;
         }
         header {
             background: var(--primary-color);
             color: white;
-            padding: 1rem;
+            padding: 1rem 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         header nav {
             display: flex;
@@ -39,13 +41,19 @@
         header nav a:hover {
             text-decoration: underline;
         }
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .container {
             padding: 2rem;
             max-width: 1200px;
             margin: auto;
-        }
-        section {
-            margin-bottom: 3rem;
         }
         .hero {
             text-align: center;
@@ -110,7 +118,7 @@
     </header>
 
     <section class="hero">
-        <h1>Hi, I'm Sophiya Sharma</h1>
+        <h1>Hi, I'm [Your Name]</h1>
         <p>Aspiring Cybersecurity Analyst | Web Developer | Data Enthusiast</p>
     </section>
 
@@ -154,19 +162,35 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: timilsena.sonia@gmail.com</p>
+            <p>Email: your.email@example.com</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your LinkedIn</a></p>
             <p>GitHub: <a href="https://github.com/your-github">Your GitHub</a></p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Sophiya Sharma. All Rights Reserved.</p>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Add interactivity if needed
-        console.log('Portfolio Loaded');
+        const sections = document.querySelectorAll('section');
+
+        const revealSection = () => {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealSection);
+        document.addEventListener('DOMContentLoaded', revealSection);
     </script>
 </body>
 </html>
