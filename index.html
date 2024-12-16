@@ -5,144 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
         }
-
         header {
-            background: #0078D7;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        nav {
             background: #333;
             color: #fff;
+            padding: 1rem 2rem;
             display: flex;
-            justify-content: center;
-            padding: 0.5rem;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        nav a {
+        header nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 1rem;
-            font-size: 1.2rem;
         }
-
-        nav a:hover {
+        header nav a:hover {
             text-decoration: underline;
         }
-
-        section {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 2rem;
-            max-width: 800px;
-            margin: auto;
         }
-
-        .projects, .skills {
+        section {
+            margin-bottom: 2rem;
+        }
+        .hero {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 2rem;
+        }
+        .hero h1 {
+            margin: 0;
+        }
+        .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1rem;
         }
-
-        .card {
+        .project-card {
             border: 1px solid #ddd;
-            border-radius: 8px;
             padding: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            margin-bottom: 1rem;
-        }
-
         footer {
-            text-align: center;
             background: #333;
             color: #fff;
-            padding: 1rem;
-            margin-top: 2rem;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+            header nav a {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Soph's Portfolio</h1>
+        <div><strong>Your Portfolio</strong></div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Sophiya, a passionate developer and data enthusiast. I enjoy solving problems and creating impactful solutions through technology.</p>
+    <section class="hero">
+        <h1>Hi, I'm [Your Name]</h1>
+        <p>Aspiring Cybersecurity Analyst | Web Developer | Data Enthusiast</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="card">
-                <h3>SajiloInn</h3>
-                <p>A hotel management system leveraging SQL to enhance guest experiences.</p>
-            </div>
-            <div class="card">
-                <h3>Car Rental System</h3>
-                <p>A web-based system for managing car rentals efficiently.</p>
-            </div>
-        </div>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an enthusiastic web developer and data enthusiast. My journey began with solving real-world problems through coding, like developing a car rental system and a hotel management system. I'm now dedicated to cybersecurity to help prevent cybercrimes like the one that affected my family.</p>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="card">
-                <h3>Programming</h3>
-                <p>Python, JavaScript, HTML, CSS</p>
-            </div>
-            <div class="card">
-                <h3>Tools</h3>
-                <p>SQL, Jekyll, Git, SIEM</p>
-            </div>
-            <div class="card">
-                <h3>Domains</h3>
-                <p>Cybersecurity, Data Analytics, Web Development</p>
-            </div>
-        </div>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development: HTML, CSS, JavaScript, Tailwind CSS, Laravel</li>
+                <li>Cybersecurity Enthusiast</li>
+                <li>Data Analysis and Management</li>
+                <li>Problem Solving and Strategy Development</li>
+            </ul>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: sophiya@example.com</p>
-        <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/sophiya</a></p>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>SajiloYatra</h3>
+                    <p>A car rental system built with HTML, CSS, JavaScript, and Laravel. Tailored to simplify travel needs.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Hotel Management System</h3>
+                    <p>An efficient solution for managing hotel bookings and operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: [Your Email]</p>
+            <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+            <p>GitHub: <a href="#">Your GitHub</a></p>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 sophiya's Portfolio. All rights reserved.</p>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
