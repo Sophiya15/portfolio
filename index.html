@@ -106,6 +106,27 @@
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity var(--transition-speed), transform var(--transition-speed);
+        }
+
+        section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section.from-left {
+            transform: translateX(-50px);
+        }
+
+        section.from-right {
+            transform: translateX(50px);
+        }
+
+        section.in-view.from-left,
+        section.in-view.from-right {
+            transform: translateX(0);
         }
 
         section h2 {
@@ -242,7 +263,7 @@
         <a href="#about">Learn More</a>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about from-left">
         <h2>About Me</h2>
         <div class="content">
             <h3>Hello! I'm Sophiya Sharma</h3>
@@ -250,7 +271,7 @@
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="skills" class="skills from-right">
         <h2>Skills</h2>
         <div class="content">
             <div class="skill-item">HTML & CSS</div>
@@ -261,7 +282,7 @@
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <section id="projects" class="projects from-left">
         <h2>Projects</h2>
         <div class="content">
             <div class="project-item">
@@ -275,7 +296,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact from-right">
         <h2>Contact Me</h2>
         <form>
             <input type="text" placeholder="Your Name" required>
@@ -288,5 +309,21 @@
     <footer>
         <p>&copy; 2024 Sophiya Sharma | All Rights Reserved</p>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
