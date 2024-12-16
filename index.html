@@ -3,73 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - [Your Name]</title>
     <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #333;
+            --background-color: #f9f9f9;
+            --text-color: #555;
+        }
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
         }
         header nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            margin: 0 1rem;
+            font-weight: bold;
         }
         header nav a:hover {
             text-decoration: underline;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
         }
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
         .hero {
             text-align: center;
-            background: #f4f4f4;
-            padding: 2rem;
+            padding: 3rem 1rem;
+            background: var(--primary-color);
+            color: white;
         }
         .hero h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
             margin: 0;
         }
-        .projects {
+        .skills, .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
-        .project-card {
-            border: 1px solid #ddd;
+        .card {
+            background: white;
             padding: 1rem;
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card h3 {
+            margin-bottom: 0.5rem;
         }
         footer {
-            background: #333;
-            color: #fff;
+            background: var(--secondary-color);
+            color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1rem;
+        }
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 600px) {
-            header {
-                flex-direction: column;
+            .hero h1 {
+                font-size: 2rem;
             }
-            header nav a {
-                margin: 0.5rem 0;
+            .hero p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div><strong>Your Portfolio</strong></div>
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -79,50 +110,63 @@
     </header>
 
     <section class="hero">
-        <h1>Hi, I'm [Your Name]</h1>
+        <h1>Hi, I'm Sophiya Sharma</h1>
         <p>Aspiring Cybersecurity Analyst | Web Developer | Data Enthusiast</p>
     </section>
 
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am an enthusiastic web developer and data enthusiast. My journey began with solving real-world problems through coding, like developing a car rental system and a hotel management system. I'm now dedicated to cybersecurity to help prevent cybercrimes like the one that affected my family.</p>
+            <p>I am a passionate individual pursuing a career in cybersecurity. My journey in technology began with solving practical problems, such as developing a car rental system and a hotel management system during my studies. Inspired by my family's experience with cybercrime, I aim to protect digital systems and contribute to the field as a threat analyst.</p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>Web Development: HTML, CSS, JavaScript, Tailwind CSS, Laravel</li>
-                <li>Cybersecurity Enthusiast</li>
-                <li>Data Analysis and Management</li>
-                <li>Problem Solving and Strategy Development</li>
-            </ul>
+            <div class="skills">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, Tailwind CSS, Laravel</p>
+                </div>
+                <div class="card">
+                    <h3>Cybersecurity</h3>
+                    <p>Threat Analysis, Vulnerability Assessment</p>
+                </div>
+                <div class="card">
+                    <h3>Data Analysis</h3>
+                    <p>Data Processing, Management, and Strategy</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects">
-                <div class="project-card">
+                <div class="card">
                     <h3>SajiloYatra</h3>
-                    <p>A car rental system built with HTML, CSS, JavaScript, and Laravel. Tailored to simplify travel needs.</p>
+                    <p>A car rental system designed to simplify travel needs, built with HTML, CSS, JavaScript, and Laravel.</p>
                 </div>
-                <div class="project-card">
+                <div class="card">
                     <h3>Hotel Management System</h3>
-                    <p>An efficient solution for managing hotel bookings and operations.</p>
+                    <p>An efficient system for managing hotel operations and bookings.</p>
                 </div>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: [Your Email]</p>
-            <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-            <p>GitHub: <a href="#">Your GitHub</a></p>
+            <p>Email: timilsena.sonia@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your LinkedIn</a></p>
+            <p>GitHub: <a href="https://github.com/your-github">Your GitHub</a></p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+        <p>&copy; 2024 Sophiya Sharma. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Add interactivity if needed
+        console.log('Portfolio Loaded');
+    </script>
 </body>
 </html>
