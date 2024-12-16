@@ -10,6 +10,7 @@
             --secondary-color: #333;
             --background-color: #f9f9f9;
             --text-color: #555;
+            --card-shadow: rgba(0, 0, 0, 0.1);
         }
         body {
             margin: 0;
@@ -26,7 +27,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px var(--card-shadow);
         }
         header nav {
             display: flex;
@@ -68,12 +69,12 @@
             color: white;
         }
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0.5rem 0;
         }
         .hero p {
             font-size: 1.2rem;
-            margin: 0;
+            margin: 0.5rem 0;
         }
         .skills, .projects {
             display: grid;
@@ -82,9 +83,9 @@
         }
         .card {
             background: white;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px var(--card-shadow);
             text-align: center;
         }
         .card h3 {
@@ -95,6 +96,7 @@
             color: white;
             text-align: center;
             padding: 1rem;
+            margin-top: 2rem;
         }
         footer a {
             color: var(--primary-color);
@@ -105,7 +107,7 @@
         }
         @media (max-width: 600px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             .hero p {
                 font-size: 1rem;
@@ -119,6 +121,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -131,12 +134,13 @@
     <div class="container">
         <section id="about" class="left">
             <h2>About Me</h2>
-            <p>I am a passionate individual pursuing a career in cybersecurity. My journey in technology began with solving practical problems, such as developing a car rental system and a hotel management system during my studies. Inspired by my family's experience with cybercrime, I aim to protect digital systems and contribute to the field as a threat analyst.</p>
+            <p>My name is Sophiya Sharma, and I am a dedicated and passionate individual pursuing a career in cybersecurity. I specialize in web development, data analysis, and threat analysis. My motivation stems from real-world challenges and the need to create secure systems to protect people and organizations from cyber threats.</p>
         </section>
 
         <section id="education" class="right">
             <h2>Education</h2>
-            <p><strong>Bachelor of Information Management (BIM)</strong> - Successfully completed my degree with hands-on experience in web development and project management.</p>
+            <p><strong>Bachelor of Information Management (BIM)</strong></p>
+            <p>Graduated with expertise in data analysis, programming, and web development. Completed significant projects including SajiloYatra (a car rental system) and a hotel management system during my studies.</p>
         </section>
 
         <section id="skills" class="left">
@@ -144,19 +148,19 @@
             <div class="skills">
                 <div class="card">
                     <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript, Tailwind CSS, Laravel</p>
+                    <p>Proficient in HTML, CSS, JavaScript, Tailwind CSS, and Laravel for building responsive and dynamic websites.</p>
                 </div>
                 <div class="card">
                     <h3>Cybersecurity</h3>
-                    <p>Threat Analysis, Vulnerability Assessment</p>
+                    <p>Strong knowledge of threat analysis, vulnerability assessment, and creating secure systems.</p>
                 </div>
                 <div class="card">
                     <h3>Data Analysis</h3>
-                    <p>Data Processing, Management, and Strategy</p>
+                    <p>Experienced in data processing, management, and strategy development for effective decision-making.</p>
                 </div>
                 <div class="card">
-                    <h3>Soft Skills</h3>
-                    <p>Team Collaboration, Communication, Problem Solving</p>
+                    <h3>Project Management</h3>
+                    <p>Effective at handling team collaboration, goal setting, and timely execution of projects.</p>
                 </div>
             </div>
         </section>
@@ -166,22 +170,29 @@
             <div class="projects">
                 <div class="card">
                     <h3>SajiloYatra</h3>
-                    <p>A car rental system designed to simplify travel needs, built with HTML, CSS, JavaScript, and Laravel.</p>
+                    <p>A car rental system designed for user-friendly travel solutions. Technologies used: HTML, CSS, JavaScript, and Laravel.</p>
                 </div>
                 <div class="card">
                     <h3>Hotel Management System</h3>
-                    <p>An efficient system for managing hotel operations and bookings.</p>
+                    <p>Streamlined system for managing hotel operations efficiently. Built during my internship as a software developer.</p>
                 </div>
                 <div class="card">
                     <h3>Portfolio Website</h3>
-                    <p>A personal portfolio showcasing my journey, skills, and projects with interactive and responsive design.</p>
+                    <p>An interactive and responsive personal portfolio showcasing my achievements and capabilities.</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="left">
+        <section id="experience" class="left">
+            <h2>Experience</h2>
+            <p><strong>Software Developer Intern</strong></p>
+            <p>Worked on a Hotel Management System during my internship, gaining hands-on experience in backend development and system design.</p>
+        </section>
+
+        <section id="contact" class="right">
             <h2>Contact</h2>
             <p>Email: sophiya.sharma@example.com</p>
+            <p>Phone: +977-9812345678</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/sophiya-sharma">linkedin.com/in/sophiya-sharma</a></p>
             <p>GitHub: <a href="https://github.com/sophiya-sharma">github.com/sophiya-sharma</a></p>
         </section>
