@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] - Portfolio</title>
+    <title>Sophiya Sharma - Portfolio</title>
     <style>
         :root {
             --primary-color: #4CAF50;
@@ -44,11 +44,17 @@
         section {
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
         section.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+        section.left {
+            transform: translateX(-50px);
+        }
+        section.right {
+            transform: translateX(50px);
         }
         .container {
             padding: 2rem;
@@ -118,17 +124,22 @@
     </header>
 
     <section class="hero">
-        <h1>Hi, I'm /h1>
+        <h1>Hi, I'm Sophiya Sharma</h1>
         <p>Aspiring Cybersecurity Analyst | Web Developer | Data Enthusiast</p>
     </section>
-Sophiya Sharma<
+
     <div class="container">
-        <section id="about">
+        <section id="about" class="left">
             <h2>About Me</h2>
             <p>I am a passionate individual pursuing a career in cybersecurity. My journey in technology began with solving practical problems, such as developing a car rental system and a hotel management system during my studies. Inspired by my family's experience with cybercrime, I aim to protect digital systems and contribute to the field as a threat analyst.</p>
         </section>
 
-        <section id="skills">
+        <section id="education" class="right">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Information Management (BIM)</strong> - Successfully completed my degree with hands-on experience in web development and project management.</p>
+        </section>
+
+        <section id="skills" class="left">
             <h2>Skills</h2>
             <div class="skills">
                 <div class="card">
@@ -143,10 +154,14 @@ Sophiya Sharma<
                     <h3>Data Analysis</h3>
                     <p>Data Processing, Management, and Strategy</p>
                 </div>
+                <div class="card">
+                    <h3>Soft Skills</h3>
+                    <p>Team Collaboration, Communication, Problem Solving</p>
+                </div>
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="right">
             <h2>Projects</h2>
             <div class="projects">
                 <div class="card">
@@ -157,14 +172,18 @@ Sophiya Sharma<
                     <h3>Hotel Management System</h3>
                     <p>An efficient system for managing hotel operations and bookings.</p>
                 </div>
+                <div class="card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal portfolio showcasing my journey, skills, and projects with interactive and responsive design.</p>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="left">
             <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your LinkedIn</a></p>
-            <p>GitHub: <a href="https://github.com/your-github">Your GitHub</a></p>
+            <p>Email: sophiya.sharma@example.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sophiya-sharma">linkedin.com/in/sophiya-sharma</a></p>
+            <p>GitHub: <a href="https://github.com/sophiya-sharma">github.com/sophiya-sharma</a></p>
         </section>
     </div>
 
